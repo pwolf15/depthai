@@ -2,8 +2,10 @@ import numpy as np
 import cv2
 import depthai
 
+# normalize bounding box coordinates (0..1) to actual frame size
 def frame_norm(frame, bbox):
     return (np.array(bbox) * np.array([*frame.shape[:2], *frame.shape[:2]])[::-1]).astype(int)
+
 # pipeline
 pipeline = depthai.Pipeline()
 
@@ -36,6 +38,7 @@ detection_nn.out.link(xout_nn.input)
 device = depthai.Device(pipeline)
 device.startPipeline()
 
+# grab camera frames and neural network inferences
 q_rgb = device.getOutputQueue("rgb")
 q_nn = device.getOutputQueue("nn")
 
