@@ -1,0 +1,1 @@
+OpenVINO == toolkit facilitating optimization of a deep learning model from a framework and deployment on Intel hardware
