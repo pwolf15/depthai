@@ -3,3 +3,4 @@ https://docs.luxonis.com/projects/api/en/latest/samples/01_rgb_preview/ (Code Sa
 
 * dense desparity map
 * semi-global matching
+* median filtering

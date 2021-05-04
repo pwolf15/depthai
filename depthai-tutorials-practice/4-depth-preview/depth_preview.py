@@ -17,7 +17,7 @@ depth = pipeline.createStereoDepth()
 depth.setConfidenceThreshold(200)
 depth.setOutputDepth(False)
 
-median = dai.StereoDepthProperties.MedianFilter.KERNEL_7x7
+median = dai.StereoDepthProperties.MedianFilter.KERNEL_5x5
 depth.setMedianFilter(median)
 
 depth.setLeftRightCheck(lr_check)
